@@ -1,0 +1,50 @@
+---
+layout: default
+title:
+---
+
+<h1> Network Analysis Toolkit for the Multicellular Interactions </h1>
+
+<p>Recent development of high throughput single-cell sequencing technologies has made it cost-effective to profile thousands of cells from a complex sample. Examining ligand and receptor expression patterns in the cell types identified from these datasets allows prediction of cell-to-cell communication at the level of niches, tissues and organism-wide. Here, we developed NATMI (Network Analysis Toolkit for Multicellular Interactions), a Python-based toolkit for multi-cellular communication network construction and network analysis of multispecies single-cell and bulk gene expression and proteomic data.</p>
+<details>
+<summary>Read more...</summary>
+
+NATMI uses connectomeDB2020 (the most up-to-date manually curated ligand-receptor interaction list) and user supplied gene expression tables with cell type labels to predict and visualize cell-to-cell communication networks. By interrogating the Tabula Muris cell atlas we demonstrate the utility of NATMI to identify cellular communities and the key ligands and receptors involved. Notably, we confirm our previous predictions from bulk data that autocrine signalling is a major feature of cell-to-cell communication networks and for the first time ever show a substantial potential for self-signalling of individual cells through hundreds of co-expressed ligand-receptor pairs. Lastly, we identify age related changes in intercellular communication between the mammary gland of 3 and 18-month-old mice in the Tabula Muris dataset. NATMI and our updated ligand-receptor lists are freely available to the research community.
+</details>
+
+<p>Contact: Rui Hou [rui.hou@research.uwa.edu.au]</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+  <li><a href="#s1"><strong>About NATMI</strong></a></li>
+  <li><a href="#s2"><strong>connectomeDB2020 database</a></li>
+</ol>
+
+<h2 id="1-about-natmi-">1. About NATMI <a name="s1"></a></h2>
+
+<p><strong>NATMI</strong> is fast, flexible and easy-to-use tool to construct <strong>cell-to-cell communication networks</strong> from user-supplied <strong>multi-omics data</strong> (single-cell and bulk) in a <strong>variety of species</strong>.</p>
+
+<p>NATMI is: <strong>python-based</strong> and is built on <a href="#s2"><strong>connectomeDB2020</strong></a> (default). Users can also add and interrogate their <strong>own interactions</strong> in <strong>any species</strong>.</p>
+
+<p><em>Developed and maintained by Rui Hou [rui.hou@research.uwa.edu.au] at the laboratory of Professor Alistair Forrest [alistair.forrest@perkins.uwa.edu.au] at the Harry Perkins Institute of Medical Research.</em></p>
+
+<h2 id="2-connectomedb2020-">2. connectomeDB2020 <a name="s2"></a></h2>
+
+<p>To facilitate the exploration of intercellular interactions, in 2015 we published a set of 1,894 ligand-receptor pairs with primary literature support and a further 528 ‘putative pairs’ (pairs of secreted and plasma membrane proteins with high throughput protein-protein interaction (PPI) evidence) (<a href="https://www.nature.com/articles/ncomms8866">Ramilowski, J. A., et al. Nat Commun 6, 7866 (2015)</a>). Here, we present <strong>connectomeDB2020</strong> an updated set of <strong>2,187 ligand-receptor pairs with primary literature support</strong>. Extending upon our previous work, we have now annotated ligands as <strong>secreted</strong>, <strong>plasma membrane</strong> or <strong>both</strong>.
+</p>
+
+<table>
+  {% for row in site.data.lsps %}
+    {% if forloop.first %}
+    <tr>
+      {% for pair in row %}
+        <th>{{ pair[0] }}</th>
+      {% endfor %}
+    </tr>
+    {% endif %}
+
+    {% tablerow pair in row %}
+      {{ pair[1] }}
+    {% endtablerow %}
+  {% endfor %}
+</table>
