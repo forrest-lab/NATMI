@@ -1,0 +1,10 @@
+# Site settings
+title: NATMI
+email: rui.hou [at] research.uwa.edu.au
+description: > # this means to ignore newlines until "baseurl:"
+    NATMI is a tool to construct cell-to-cell communication networks from user-supplied multi-omics data in a variety of species.
+baseurl: "/NATMI/" # the subpath of your site, e.g. /blog/
+url: "https://asrhou.github.io/" # the base hostname & protocol for your site
+github_username:  asrhou
+# Build settings
+markdown: kramdown
