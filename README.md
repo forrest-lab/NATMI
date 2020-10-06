@@ -7,6 +7,10 @@ Recent development of high throughput single-cell sequencing technologies has ma
 NATMI uses connectomeDB2020 (the most up-to-date manually curated ligand-receptor interaction list) and user supplied gene expression tables with cell type labels to predict and visualize cell-to-cell communication networks. By interrogating the Tabula Muris cell atlas we demonstrate the utility of NATMI to identify cellular communities and the key ligands and receptors involved. Notably, we confirm our previous predictions from bulk data that autocrine signalling is a major feature of cell-to-cell communication networks and for the first time ever show a substantial potential for self-signalling of individual cells through hundreds of co-expressed ligand-receptor pairs. Lastly, we identify age related changes in intercellular communication between the mammary gland of 3 and 18-month-old mice in the Tabula Muris dataset. NATMI and our updated ligand-receptor lists are freely available to the research community.
 </details>  
 
+How to cite: 
+1. Hou, R., Denisenko, E., Ong, H.T. et al. Predicting cell-to-cell communication networks using NATMI. Nat Commun 11, 5011 (2020). https://doi.org/10.1038/s41467-020-18873-z
+2. Ramilowski, J., Goldberg, T., Harshbarger, J. et al. A draft network of ligand–receptor-mediated multicellular signalling in human. Nat Commun 6, 7866 (2015). https://doi.org/10.1038/ncomms8866
+
 Contact: Rui Hou [rui.hou@research.uwa.edu.au]
 
 ## Table of Contents
